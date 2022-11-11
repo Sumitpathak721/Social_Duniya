@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media | Login</title>
+  
+</head>
+<body style="background-image: url('./images/bg_login.jpg');
+background-repeat: no-repeat;">
+<style>
+  .succes_flag{
+      width:100%;
+      background-color: rgb(7, 178, 7);
+      color:white;
+      opacity:0.7;
+      z-index: 2;
+      margin:-8px;
+      padding:0px 7px;
+  }
+  .incorrect_flag{
+    width:100%;
+      background-color: rgb(255, 5, 5);
+      color:white;
+      opacity:0.7;
+      z-index: 2;
+      margin:-8px;
+      padding:0px 7px;
+  }
+</style>
+<%if(succesful_signup_flag){%>
+<div class="succes_flag">
+SuccesFully new account created.Please Login to your account
+</div>
+<%}else if(incorrect_crediential_flag){%>
+<div class="incorrect_flag">
+  Please Enter Correct Crediential }:(
+</div>
+<%}%>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    .main1{
+      background-color: white;
+      text-align: center;
+      width:400px;
+      margin:0% auto;
+      margin-top:3%;
+      border-radius: 25px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    
+    .cradential input{
+      height:40px;
+      width:280px;
+      border-radius:10px;
+      border:1px grey solid;
+      margin:10px 20%;
+      font-size: 20px;
+      padding-left: 5px;
+    }
+    .cradential button{
+      background-color: rgba(0, 98, 255, 0.939);
+      color:white;
+      border:0px;
+      border-radius:10px;
+      font-size: 20px;
+      padding:10px;
+      width:90%;
+      margin:5% 25%;
+      margin-top:20%;
+    }
+    .cradential a{
+      text-decoration: none;
+      margin-left:50%;
+    }
+    .cradential{
+      padding-bottom:5px;
+    }
+    #logo{
+      
+      font-family: 'Dancing Script', cursive;
+      font-size:50px;
+      color:black;
+    }
+    
+  </style>
+  <div class="main1">
+    
+    <div id="logo">
+      <!-- <img src="./images/1200px-Instagram_logo.svg.png" alt="logo" style="height:50px;margin:10% auto;"> -->
+      <b>Social Duniya</b>
+    </div>
+    <form action="/login" class="cradential" method="POST">
+      <table>
+        <tr>
+          <td>
+            <input type="email" name="email" placeholder="Email Id">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="password" name="password" placeholder="********">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit">Log in</button>
+          </td>
+        </tr>
+        <tr>
+        <td>
+          <a href="#" >Forget password</a>
+        </td>
+        </tr>
+      </table>
+    </form>
+    
+  </div>
+  <style>
+    .main2{
+      background-color: white;
+      text-align: center;
+      width:400px;
+      margin:0% auto;
+      margin-top:2%;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      padding:20px 0px;
+      font-size: 20px;
+
+    }
+    .main2 a{
+      text-decoration: none;
+    }
+  </style>
+  <div class="main2">
+    Don't have account?<a href="/signup">create account</a>
+  </div>
+</body>
+</html>

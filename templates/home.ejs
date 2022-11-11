@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media|Home</title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- sidebar starts -->
+  <style>
+    .sidebar a{
+      text-decoration: none;
+      color:inherit;
+    }
+  </style>
+  <div class="sidebar">
+    <a href="/">
+      <div class="sidebarOption active">
+        <span class="material-icons"> home </span>
+        <h2 class="display-name-menu">Home</h2>
+      </div>
+    </a>
+
+    <div class="sidebarOption">
+      <span class="material-icons"> search </span>
+      <h2 class="display-name-menu">Explore</h2>
+    </div>
+    <div class="sidebarOption">
+      <span class="material-icons"> mail_outline </span>
+      <h2 class="display-name-menu">Messages</h2>
+    </div>
+    <div class="sidebarOption">
+      <span class="material-icons"> bookmark_border </span>
+      <h2 class="display-name-menu">Bookmarks</h2>
+    </div>
+    <a href="/profile"><div class="sidebarOption">
+      <span class="material-icons"> perm_identity </span>
+      <h2 class="display-name-menu">Profile</h2>
+    </div>
+    </a>
+    <form action="/" method="POST">
+      <button type="submit">
+    <div class="sidebarOption">
+      <span class="material-icons"> logout </span>
+      <h2 class="display-name-menu">Logout</h2>
+    </div></button></form>
+
+  </div>
+  <!-- sidebar ends -->
+
+  <!-- feed starts -->
+  <div class="feed">
+    <div class="feed__header">
+      <h2>Home</h2>
+    </div>
+
+    <!-- tweetbox starts -->
+    <div class="tweetBox">
+      <form action="/" method="POST">
+        <div class="tweetbox__input">
+          <img src="./images/profile.png" alt="" />
+          <input name='detail' type="text" placeholder="What's happening?" />
+        </div>
+        <button class="tweetBox__tweetButton" style="background-color:rgb(223, 223, 13);color:black;">Send</button>
+      </form>
+    </div>
+    <!-- tweetbox ends -->
+
+    <!-- post starts -->
+    <div class="post">
+      <div class="post__avatar">
+        <img src="./images/profile.png" alt="" />
+      </div>
+      <div class="post__body">
+        <div class="post__header">
+          <div class="post__headerText">
+            <h3>
+              <%=CurrentUser.name%>
+                <span class="post__headerSpecial">
+                  <span class="material-icons post__badge"> verified </span>
+                </span>
+            </h3>
+          </div>
+          <div class="post__headerDescription">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <img src="./images/Elon Musk.webp" alt="" />
+        <div class="post__footer">
+          <span class="material-icons"> repeat </span>
+          <span class="material-icons"> favorite_border </span>
+          <span class="material-icons"> publish </span>
+        </div>
+      </div>
+    </div>
+    <!-- post ends -->
+
+    <div class="post">
+      <div class="post__avatar">
+        <img src="./images/profile.png" alt="" />
+      </div>
+      <div class="post__body">
+        <div class="post__header">
+          <div class="post__headerText">
+            <h3>
+              <%=CurrentUser.name%>
+
+                <span class="post__headerSpecial"><span class="material-icons post__badge"> verified </span></span>
+            </h3>
+          </div>
+          <div class="post__headerDescription">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <img src="./images/painting.jpg" alt="" />
+        <div class="post__footer">
+          <span class="material-icons"> repeat </span>
+          <span class="material-icons"> favorite_border </span>
+          <span class="material-icons"> publish </span>
+        </div>
+      </div>
+    </div>
+    <!-- post starts -->
+    <!-- post ends -->
+  </div>
+  <!-- feed ends -->
+
+  <!-- widgets starts -->
+  <div class="widgets">
+    <div class="widgets__input">
+      <span class="material-icons widgets__searchIcon"> search </span>
+      <input type="text" placeholder="Search Posts" />
+    </div>
+
+    <div class="widgets__widgetContainer">
+      <h2>What's happening?</h2>
+      <blockquote class="twitter-tweet">
+        <div style="margin:10px auto;">
+          <table>
+            <tr>
+              <td>
+                <img src="./images/profile.png" style="border-radius:100%;width:40px;">
+              </td>
+              <td>
+                <p style="font-size:15px;margin-left:10px"><b>Unknown person</b><br>Lorem, ipsum dolor sit amet
+                  consectetur adipisicing.<span style="color:rgb(10, 121, 224);"">#TagName</span></p>
+              </td>
+              </tr>
+            </table>
+            <img src=" ./images/car.jpg" style="width:100%;">
+
+        </div>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </div>
+  <!-- widgets ends -->
+</body>
+
+</html>

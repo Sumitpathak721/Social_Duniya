@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/home.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+</head>
+<body>
+    <style>
+        .sidebar a{
+          text-decoration: none;
+          color:inherit;
+        }
+      </style>
+    <div class="sidebar">
+        <a href="/">
+        <div class="sidebarOption">
+          <span class="material-icons"> home </span>
+          <h2 class="display-name-menu">Home</h2>
+        </div>
+        </a>
+        <div class="sidebarOption">
+          <span class="material-icons"> search </span>
+          <h2 class="display-name-menu">Explore</h2>
+        </div>
+        <div class="sidebarOption">
+          <span class="material-icons"> mail_outline </span>
+          <h2 class="display-name-menu">Messages</h2>
+        </div>
+        <div class="sidebarOption">
+          <span class="material-icons"> bookmark_border </span>
+          <h2 class="display-name-menu">Bookmarks</h2>
+        </div>
+        <a href="/profile"><div class="sidebarOption active">
+          <span class="material-icons"> perm_identity </span>
+          <h2 class="display-name-menu">Profile</h2>
+        </div>
+        </a>
+        <form action="/" method="POST">
+          <button type="submit">
+        <div class="sidebarOption">
+          <span class="material-icons"> logout </span>
+          <h2 class="display-name-menu">Logout</h2>
+        </div></button></form>
+    
+      </div>
+      <!-- sidebar ends -->
+    
+    <div>
+        <style>
+            
+            #image img{
+                width:300px;
+                height:300px;
+                border-radius: 100%;
+                padding:10px;
+            }
+            #main{
+                padding-left:40px;
+            }
+            #main h1{
+                color:rgba(5, 70, 168, 0.769);
+                font-size:50px;
+                padding-bottom:60px;
+            }
+            #main h4{
+                font-size:20px;
+                padding:5px ;
+            }
+        </style>
+        <table>
+        <tr>
+        <td id="image">
+            <img src="./images/profile.png">
+        </td>
+        <td id="main">
+            <h1><%=CurrentUser.name%></h1>
+            <h4>Email:<%=CurrentUser.email%></h4>
+            <h4>Tel No.:<%=CurrentUser.number%></h4>
+            <h4>Bio:<%=CurrentUser.detail%></h4>
+        </td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
